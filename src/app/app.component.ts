@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Tarefa } from './tarefa';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular';
+  title = 'Lista de Tarefas';
+
+  tarefas = [
+    new Tarefa('Tarefa 1'),
+    new Tarefa('Tarefa 2')
+  ];
+
+  adicionaTarefa = function adicionaTarefa(tiutlo: string) {
+    this.tarefas.push(new Tarefa(tiutlo));
+  }
 }
