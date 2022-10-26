@@ -1,18 +1,24 @@
 <div class="body">
+  <img src="../assets/img.png" alt="Lista de Tarefas - Imagem" width="150" height="150">
+
   <h1>{{title}}</h1>
 
-  <div class="diviser">
+  <div>
     <label for="">Adicione uma tarefa:</label>
     <br/>
     <input type="text" #novaTarefa (keyup.enter)="adicionaTarefa(novaTarefa.value); novaTarefa.value = ''"/>
     <button (click)="adicionaTarefa(novaTarefa.value); novaTarefa.value = ''"> Adicionar </button>
   </div>
 
-  <div class="diviser">
-    <ul>
-      <li *ngFor="let tarefa of tarefas">
-        {{tarefa.titulo}}
-      </li>
-    </ul>
+  <div>
+    <h1>Tarefas</h1>
+    <div class="scroll">
+      <ul *ngIf="tarefas.length > 0">
+        <li *ngFor="let tarefa of tarefas">
+          {{tarefa.titulo}}
+        </li>
+      </ul>
+      <p *ngIf="tarefas.length === 0">Ainda não existem tarefas cadastradas</p>
+    </div>
   </div>
 </div>

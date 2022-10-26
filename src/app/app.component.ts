@@ -8,13 +8,9 @@ import { Tarefa } from './tarefa';
 })
 export class AppComponent {
   title = 'Lista de Tarefas';
+  tarefas = new Array;
 
-  tarefas = [
-    new Tarefa('Tarefa 1'),
-    new Tarefa('Tarefa 2')
-  ];
-
-  adicionaTarefa = function adicionaTarefa(tiutlo: string) {
+  adicionaTarefa(tiutlo: string) {
     this.tarefas.push(new Tarefa(tiutlo));
   }
 }

@@ -3,11 +3,33 @@
   text-align: center;
 }
 
-.diviser {
-  display: inline-block;
-  width: 50%;
-}
-
 ul {
   list-style-type: none;
+}
+
+input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px 0px 0px 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #e56354; /* Green */
+  border: none;
+  color: white;
+  padding: 11px 20px;
+  text-align: center;
+  border-radius: 0px 4px 4px 0px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.scroll {
+  height: 200px;
+  overflow-y: scroll;
+  white-space: nowrap;
 }
